@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 public class Medico
 {
-    private string nome;
+    private string nome = string.Empty;
     private int numeroColega;
-    private string especialidadeBase;
+    private string especialidadeBase = string.Empty;
 
     public string Nome
     {
@@ -25,7 +25,7 @@ public class Medico
         {
             if (value <= 0)
                 throw new ArgumentException ("O número da ordem deve ser positivo.");
-                numeroColega = value;
+            numeroColega = value;
         }
     }
     public string EspecialidadeBase

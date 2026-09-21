@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class MedicoEspecialista : Medico
 {
-    private string subEspecialidade;
+    private string subEspecialidade = string.Empty;
     public string SubEspecialidade
     {
         get => subEspecialidade;
@@ -11,7 +11,7 @@ public class MedicoEspecialista : Medico
         {
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("A subespecialidade não pode ser vazia.");
-                subEspecialidade;
+                subEspecialidade = value;
         }
     }
 

@@ -7,10 +7,11 @@ using Classes;
 //Classe
 public class Hospital
 {
-  private string nome;
-  private List<Paciente> pacientes;
+    private string nome = string.Empty;
+    // Nomeado como _pacientes para evitar confusão com os parâmetros
+    private List<Paciente> _pacientes;
 
-  public string Nome
+    public string Nome
     {
         get => nome;
         set
@@ -24,7 +25,7 @@ public class Hospital
     public Hospital(string nome)
     {
         Nome = nome;
-        pacientes = new List<Paciente>();
+        _pacientes = new List<Paciente>();
     }
     
     //Método com ref
@@ -32,38 +33,40 @@ public class Hospital
     {
         if (paciente != null)
         {
-            pacientes.Add(paciente);
+            _pacientes.Add(paciente);
             totalRegistados++;
         }
     }
-    //étodo com Array e foreach
-    public void CarregarPacientesIniciais(Paciente[] pacientes)
+
+    //Método com Array e foreach (Parâmetro nomeado como pacientesIniciais)
+    public void CarregarPacientesIniciais(Paciente[] pacientesIniciais)
     {
-        if(pacientes != null)
+        if(pacientesIniciais != null)
         {
-            foreach(var paciente in pacientes)
+            foreach(var paciente in pacientesIniciais)
             {
                 if(paciente != null)
                 {
-                    pacientes.Add(paciente);
+                    _pacientes.Add(paciente); // Agora adiciona corretamente à lista da classe
                 }
             }
         }
     }
 
-    //Listar Pacientes com foreach
-    public void LsitarPacientes()
+    //Listar Pacientes com foreach 
+    public void ListarPacientes()
     {
         Console.WriteLine($"----- Lista de pacientes do Hospital {Nome} -----");
-        foreach(var paciente in pacientes)
+        foreach(var paciente in _pacientes)
         {
             Console.WriteLine(paciente.ToString());
         }
     }
+
     //Método com valor de Retorno: ProcurarPaciente
     public Paciente? ProcurarPaciente(int numeroPaciente)
     {
-        foreach( var paciente in pacientes)
+        foreach(var paciente in _pacientes)
         {
             if (paciente.NumeroPaciente == numeroPaciente)
             {
@@ -73,31 +76,29 @@ public class Hospital
         return null;
     }
 
-    //Método LINQ
+    // --- Métodos LINQ ---
 
     //Filtrar por Prioridade
     public List<Paciente> ObterPacientesPorPrioridade(PrioridadeAtendimento prioridade)
     {
-        return Paciente.Where(paciente => paciente.Prioridade == prioridade).ToList();
+        return _pacientes.Where(paciente => paciente.Prioridade == prioridade).ToList();
     }
 
     //Ordenar por Idade
-    public List<Paciente> PacienteOrdenadosPorIdade()
+    public List<Paciente> PacientesOrdenadosPorIdade()
     {
-        return pacientes.OrderBy(paciente => paciente.Idade).ToList();
+        return _pacientes.OrderBy(paciente => paciente.Idade).ToList();
     }
 
     //Contar pacientes urgentes
     public int ContarPacientesUrgentes()
     {
-        return pacientes.Count(paciente => paciente.Prioridade == PrioridadeAtendimento.Urgente || paciente.Prioridade = PrioridadeAtendimento.MuitoUrgente);
+        return _pacientes.Count(paciente => paciente.Prioridade == PrioridadeAtendimento.Urgente || paciente.Prioridade == PrioridadeAtendimento.MuitoUrgente);
     }
 
     //Verificar existência
-    public bool ExistePaciente(string nome)
+    public bool ExistePaciente(string nomePaciente)
     {
-        return pacientes.Any(pacientes => Paciente.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
+        return _pacientes.Any(paciente => paciente.Nome.Equals(nomePaciente, StringComparison.OrdinalIgnoreCase));
     }
-
-    
 }

@@ -1,10 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace Classes;
-
-//Classe
-public class PrioridadeAtendimento
+//enum = is a special "class" that represents a group of constants
+// enumerations = specifically listed
+public enum PrioridadeAtendimento
 {
     Urgente,
     MuitoUrgente,

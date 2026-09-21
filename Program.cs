@@ -46,15 +46,15 @@ class Program
             Console.WriteLine($"A sala está disponível? {salaEmergencia.EstaDisponivel()}\n");
 
             //Criar médico especialista e ToString
-            MedicoEspecialista medico = new MedicoEspecialista("rui Mendes", 2050, "Cardiologia", "Cardiologia Pediátrica");
+            MedicoEspecialista medico = new MedicoEspecialista("Rui Mendes", 2050, "Cardiologia", "Cardiologia Pediátrica");
             Console.WriteLine(medico.ToString() + "\n");
 
             //Listar pacientes
-            hospital.LsitarPacientes();
+            hospital.ListarPacientes();
             Console.WriteLine();
 
             //Procurar paciente
-            Console.WriteLine("------ Testando ProcurarPaciente --------");
+            Console.WriteLine("\n------ Testando ProcurarPaciente --------\n");
             int idExistente = 103;
 
             Paciente? pacienteEncontrado = hospital.ProcurarPaciente(idExistente);
@@ -78,7 +78,7 @@ class Program
                 }
             
             //Consultas LINQ
-            Console.WriteLine("------ Testando Consultas LINQ -----");
+            Console.WriteLine("\n------ Testando Consultas LINQ -----\n");
             int urgentesCount = hospital.ContarPacientesUrgentes();
             Console.WriteLine($"Número de pacientes Urgentes ou Muito Urgentes: {urgentesCount}");
 
@@ -87,7 +87,7 @@ class Program
             Console.WriteLine($"O paciente '{nomeBusca}' existe no hospital? {existe}");
 
             Console.WriteLine("\nPacientes ordenados por idade (do mais novo para o mais velho): ");
-            var ordenados = hospital.PacienteOrdenadosPorIdade();
+            var ordenados = hospital.PacientesOrdenadosPorIdade();
             foreach( var paciente in ordenados)
             {
                 Console.WriteLine($"- {paciente.Nome}, {paciente.Idade} anos");
