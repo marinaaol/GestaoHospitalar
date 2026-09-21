@@ -1,0 +1,8 @@
+/Users/marinaoliveira/Documents/ESTUDOS/CET PROGRAMAÇÃO ISLA/UC00620 - Desenvolver apps em C#/MarinaOliveiraFichaHospitalar/GestaoHospitalar/obj/Debug/net10.0/GestaoHospitalar.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marinaoliveira/Documents/ESTUDOS/CET PROGRAMAÇÃO ISLA/UC00620 - Desenvolver apps em C#/MarinaOliveiraFichaHospitalar/GestaoHospitalar/obj/Debug/net10.0/GestaoHospitalar.AssemblyInfoInputs.cache
+/Users/marinaoliveira/Documents/ESTUDOS/CET PROGRAMAÇÃO ISLA/UC00620 - Desenvolver apps em C#/MarinaOliveiraFichaHospitalar/GestaoHospitalar/obj/Debug/net10.0/GestaoHospitalar.AssemblyInfo.cs
+/Users/marinaoliveira/Documents/ESTUDOS/CET PROGRAMAÇÃO ISLA/UC00620 - Desenvolver apps em C#/MarinaOliveiraFichaHospitalar/GestaoHospitalar/obj/Debug/net10.0/GestaoHospitalar.csproj.CoreCompileInputs.cache
+/Users/marinaoliveira/Documents/ESTUDOS/CET PROGRAMAÇÃO ISLA/UC00620 - Desenvolver apps em C#/Exercícios/MarinaOliveiraFichaHospitalar/GestaoHospitalar/obj/Debug/net10.0/GestaoHospitalar.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marinaoliveira/Documents/ESTUDOS/CET PROGRAMAÇÃO ISLA/UC00620 - Desenvolver apps em C#/Exercícios/MarinaOliveiraFichaHospitalar/GestaoHospitalar/obj/Debug/net10.0/GestaoHospitalar.AssemblyInfoInputs.cache
+/Users/marinaoliveira/Documents/ESTUDOS/CET PROGRAMAÇÃO ISLA/UC00620 - Desenvolver apps em C#/Exercícios/MarinaOliveiraFichaHospitalar/GestaoHospitalar/obj/Debug/net10.0/GestaoHospitalar.AssemblyInfo.cs
+/Users/marinaoliveira/Documents/ESTUDOS/CET PROGRAMAÇÃO ISLA/UC00620 - Desenvolver apps em C#/Exercícios/MarinaOliveiraFichaHospitalar/GestaoHospitalar/obj/Debug/net10.0/GestaoHospitalar.csproj.CoreCompileInputs.cache
