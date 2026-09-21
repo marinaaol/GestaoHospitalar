@@ -98,4 +98,6 @@ public class Hospital
     {
         return pacientes.Any(pacientes => Paciente.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase));
     }
+
+    
 }
